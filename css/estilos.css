@@ -1,0 +1,63 @@
+/* == VARIABLES COLORES == */
+
+:root {
+	--main-color:#000D1E;
+	--secondary-color:#807C5A;
+	--tertiary-color:white;
+	--extra-color-1:#CCCFD2;
+    --extra-color-2:#EB0029;
+    --extra-color-3:#F8F9FA;
+    --extra-color-4:#3E4855;
+    --extra-color-5:#0F3B73;
+    --extra-color-6:#6A664A;
+    --extra-color-7:#CED4DA;
+    --extra-color-8:#F8F9FA;
+    --extra-color-9:#DFDED6;
+    --extra-color-10:#185FBA;
+    --extra-color-11:#0d2647;
+    --extra-color-12:#c1af73;
+}
+
+/* Importación de Tipografía de fontawesome */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*========================== Inicio Estilos universales ================= */
+
+:root{
+    font-size: 20px;
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*========================== Inicio Estilos Cabecera ================= */
+
+.navbar--down{
+    background-color:#3a454b;
+    padding: 15px 20px;
+}
+.navbar--up{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center!important;
+}
+
+.navbar--donw__enlace{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px 15px;
+    background-color:#505c63;
+    border-radius: 5px;
+
+}
+.navbar--up p{
+    margin-bottom: 0!important;
+}
+/*========================== Fin Estilos Cabecera ================= */
