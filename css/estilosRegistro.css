@@ -1,0 +1,73 @@
+/*========================== Inicio Estilos Cabecera ================= */
+
+.navbar--down{
+    padding: 40px 0px;
+}
+
+
+/*========================== Fin Estilos Cabecera ================= */
+
+/***************************************************************************************************/
+
+/*========================== Inicio Estilos Section 1 ================= */
+
+main{
+    background-image: url(../img/bg-5.jpg)!important;
+    background-repeat: no-repeat;
+    background-position: center!important;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.register--section__title{
+    font-weight: 900;
+    color: white;
+    text-shadow: 3px 4px 10px black;
+}
+input[type="radio"]{
+    accent-color: #b225b2!important;
+}
+
+input[type="radio"]:checked{
+    background-color:#b225b2!important ;
+    border-color: #b225b2!important;
+}
+.radios--section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.text--label{
+    color: #b225b2!important;
+
+}
+
+.register--section__form{
+    background-color: #FFF6DD;
+    border-radius: 20px;
+    padding: 25px 35px;
+    border: 5px solid #505c63;
+}
+
+.register--btn{
+    background-color: #b225b2;
+    outline: 0;
+    border: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.register--btn:hover{
+    background-color: #691669;
+}
+
+.return--btn{
+    background-color:#505c63 ;
+    outline: 0;
+    border: 0;
+    transition: all 300ms ease-in-out;
+}
+.return--btn:hover{
+    background-color: #343C41;
+}
+/*========================== Fin Estilos Section 1 ================= */

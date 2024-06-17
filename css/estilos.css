@@ -60,6 +60,8 @@ a{
 
 .movies--list--section__title{
     font-weight: 900;
+    text-shadow: 3px 4px 10px #A6A6A6;
+
 }
 
 .movies--list--section__button{
@@ -89,7 +91,7 @@ a{
 main{
     background-image: url(../img/bg-3.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center!important;
     background-size: cover;
     height: auto;
     padding-bottom: 50px;
@@ -100,7 +102,7 @@ main{
 /***************************************************************************************************/
 
 /*========================== Inicio Estilos Footer ================= */
-input[type="text"]{
+input[type="text"],input[type="number"], input[type="date"]{
     outline: 4px solid #b225b2;
 }
 
