@@ -1,9 +1,21 @@
+<?php
+
+include_once './controladores/funciones.php';
+
+$bd = conexion('localhost','cine_isil','root','');
+
+if ($_POST) {
+  guardarUsuario($bd,'movies',$_POST);
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Registro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
@@ -33,7 +45,7 @@
         <section class="register--section container-fluid">
             <h1 class="register--section__title text-center fs-3 text-uppercase pt-3">Agregue una película</h1>
             <div class="row justify-content-center register--section__container">
-                <form class="register--section__form col-5">
+                <form action="#" method="POST" class="register--section__form col-5" >
                     <div class="mb-3">
                       <label for="nombre" class="form-label text--label">Nombre</label>
                       <input type="text" class="form-control" id="nombre" name="nombre">
@@ -60,7 +72,7 @@
                     </div>   
                     <div class="mb-3">
                         <label for="director" class="form-label text--label">Género</label>
-                        <input type="text" class="form-control" id="director" name="director">
+                        <input type="text" class="form-control" id="director" name="genero">
                     </div>  
 
                     <fieldset class="mb-3">
@@ -79,7 +91,7 @@
 
 
                     <button type="submit" class="btn btn-primary register--btn">Registrar Película</button>
-                    <button type="submit" class="btn btn-danger return--btn">Volver</button>
+                    <a href="./index.php" class="btn btn-danger return--btn">Volver</a>
 
                   </form>
             </div>

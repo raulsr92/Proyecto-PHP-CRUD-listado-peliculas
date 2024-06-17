@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2024 at 10:50 PM
+-- Generation Time: Jun 17, 2024 at 09:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,23 +18,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `manchesterdb`
+-- Database: `cine_isil`
 --
-CREATE DATABASE IF NOT EXISTS `manchesterdb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `manchesterdb`;
+CREATE DATABASE IF NOT EXISTS `cine_isil` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `cine_isil`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Table structure for table `movies`
 --
 
-CREATE TABLE `tb_user` (
+CREATE TABLE `movies` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellido` varchar(50) NOT NULL,
-  `correo` varchar(50) NOT NULL,
-  `observaciones` varchar(200) NOT NULL
+  `titulo` varchar(100) NOT NULL,
+  `calificacion` int(11) NOT NULL,
+  `premios` int(11) NOT NULL,
+  `fechaCreacion` date NOT NULL,
+  `duracion` int(11) NOT NULL,
+  `genero` varchar(80) NOT NULL,
+  `preferencia` int(11) NOT NULL,
+  `director` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -42,20 +46,19 @@ CREATE TABLE `tb_user` (
 --
 
 --
--- Indexes for table `tb_user`
+-- Indexes for table `movies`
 --
-ALTER TABLE `tb_user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `correo` (`correo`);
+ALTER TABLE `movies`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT for table `movies`
 --
-ALTER TABLE `tb_user`
+ALTER TABLE `movies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

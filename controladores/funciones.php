@@ -16,21 +16,30 @@ function guardarUsuario($bd, $tabla, $datos){
 
     // Almacenar los datos recibidos del formulario
     $nombre = $datos['nombre'];
-    $apellido = $datos['apellido'];
-    $correo = $datos['email'];
-    $observaciones = $datos['observaciones'];
+    $director = $datos['director'];
+    $calificacion = $datos['calificacion'];
+    $premios = $datos['premios'];
+    $fechaCreacion = $datos['fe-creacion'];
+    $duracion = $datos['duracion'];
+    $genero = $datos['genero'];
+    $preferencia = $datos['preferencia'];
 
     // Armar la consulta 
-    $sql = "insert into $tabla (nombre, apellido, correo, observaciones) 
-    values(:nombre,:apellido,:correo,:observaciones )";
+    $sql = "insert into $tabla (titulo, director, calificacion, premios, fechaCreacion, duracion, genero, preferencia) 
+    values(:titulo,:director,:calificacion,:premios,:fechaCreacion,:duracion,:genero,:preferencia )";
 
     // Preparar la consulta
 
     $query = $bd->prepare($sql);
-    $query->bindValue(':nombre',$nombre);
-    $query->bindValue(':apellido',$apellido);
-    $query->bindValue(':correo',$correo);
-    $query->bindValue(':observaciones',$observaciones);
+    $query->bindValue(':titulo',$nombre);
+    $query->bindValue(':director',$director);
+    $query->bindValue(':calificacion',$calificacion);
+    $query->bindValue(':premios',$premios);
+    $query->bindValue(':fechaCreacion',$fechaCreacion);
+    $query->bindValue(':duracion',$duracion);
+    $query->bindValue(':genero',$genero);
+    $query->bindValue(':preferencia',$preferencia);
+
 
     // Ejecutar la consulta
     $query->execute();
