@@ -20,7 +20,7 @@
 
 /* Importación de Tipografía de fontawesome */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*========================== Inicio Estilos universales ================= */
 
@@ -29,7 +29,7 @@
 }
 
 *{
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
 	padding: 0;
     box-sizing: border-box;
@@ -55,9 +55,43 @@
     padding: 10px 15px;
     background-color:#505c63;
     border-radius: 5px;
+    transition: all 350ms ease-in-out;
 
 }
+
+.navbar--donw__enlace:hover{
+    background-color:#00aaeb;
+}
+
 .navbar--up p{
     margin-bottom: 0!important;
 }
+
+
 /*========================== Fin Estilos Cabecera ================= */
+
+/***************************************************************************************************/
+
+/*========================== Inicio Estilos Section 1 ================= */
+
+.movies--list--section__title{
+    font-weight: 900;
+}
+
+.movies--list--section__button{
+    background-color: #8d168d;
+}
+
+.movies--list--section__button:hover{
+    background-color: #b225b2;
+}
+
+/* Dándole un ancho a las columnas de los íconos de editar, ver y elminar*/
+.movie--list thead tr th:nth-child(3), .movie--list thead tr th:nth-child(4), .movie--list thead tr th:nth-child(5){ 
+    width: 12%;
+}
+
+.movie--list__see-icon, .movie--list__delete-icon, .movie--list__edit-icon{
+    color: #3a454b;
+}
+/*========================== Fin Estilos Section 1 ================= */
