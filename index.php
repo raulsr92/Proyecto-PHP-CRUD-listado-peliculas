@@ -4,7 +4,7 @@ include_once './controladores/funciones.php';
 
 $bd = conexion('localhost','cine_isil','root','');
 
-$arrayDeRegistros = buscarUsuario($bd,'movies');
+$arrayDePeliculas = buscarUsuario($bd,'movies');
 
 
 ?>
@@ -66,9 +66,11 @@ $arrayDeRegistros = buscarUsuario($bd,'movies');
                       </tr>
                     </thead>
                     <tbody>
+                      <?php 
+                        foreach ($arrayDePeliculas as $nrofila => $pelicula): ?>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>La Guerre de las Galaxias</td>
+                        <th scope="row"><?= $pelicula['id'] ?></th>
+                        <td><?= $pelicula['titulo'] ?></td>
                         <td>
                             <a href=""><i class="bi bi-eye-fill movie--list__see-icon"></i></a>
                         </td>
@@ -79,19 +81,7 @@ $arrayDeRegistros = buscarUsuario($bd,'movies');
                             <a href=""><i class="bi bi-trash3-fill movie--list__delete-icon"></i></a>
                         </td>
                       </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Avatar</td>
-                        <td>
-                            <a href=""><i class="bi bi-eye-fill movie--list__see-icon"></i></a>
-                        </td>
-                        <td>
-                            <a href=""><i class="bi bi-pencil-square movie--list__edit-icon"></i></a>
-                        </td>
-                        <td>
-                            <a href=""><i class="bi bi-trash3-fill movie--list__delete-icon"></i></a>
-                        </td>
-                      </tr>     
+                      <?php endforeach; ?>  
                     </tbody>
                   </table>
               </div>

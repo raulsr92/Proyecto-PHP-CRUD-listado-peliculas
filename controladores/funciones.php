@@ -62,9 +62,9 @@ function buscarUsuario($bd, $tabla){
     
     // Almacenar las filas resultantes de la consulta en un array
 
-    $users = $query->fetchAll(PDO::FETCH_ASSOC);
+    $movies = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    return $users;
+    return $movies;
 
 }
 
