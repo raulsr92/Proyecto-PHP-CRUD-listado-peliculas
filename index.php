@@ -41,15 +41,14 @@ $arrayDePeliculas = buscarUsuario($bd,'movies');
         <section class="movies--list--section container-fluid">
             <h1 class="movies--list--section__title text-center fs-3 text-uppercase pt-3">Listado de Películas</h1>
             <form class="row g-3 mt-3">
-                <div class="col-auto">
+                <div class="col-5 col-sm-auto">
                     <button type="submit" class="btn btn-secondary mb-3 movies--list--section__button">
                         <i class="bi bi-search"></i>
-
                         Buscar</button>
                   </div>
-                <div class="col-auto">
+                <div class="col-7 col-sm-auto"">
                   <label for="inputPassword2" class="visually-hidden">Password</label>
-                  <input type="text" class="form-control" id="inputPassword2" placeholder="Nombre de Película">
+                  <input type="text" class="form-control search-input-placeholder" id="inputPassword2" placeholder="Nombre de Película">
                 </div>
 
               </form>

@@ -82,11 +82,9 @@ a{
 }
 
 .table--container{
-    padding-bottom: 50px;
+    padding-bottom: 70px;
  
 }
-
-
 
 main{
     background-image: url(../img/bg-3.jpg);
@@ -95,6 +93,10 @@ main{
     background-size: cover;
     height: auto;
     padding-bottom: 50px;
+}
+
+.movies--list--section{
+    padding-top: 20px;
 }
 /*========================== Fin Estilos Section 1 ================= */
 
@@ -105,7 +107,7 @@ main{
 
 
 footer{
-    padding: 50px 0 50px 0;
+    padding: 70px 0 50px 0;
     color: #fcd771;
     background: #3a454b;
     display: flex;
@@ -133,3 +135,38 @@ footer p{
 .footer-icons-link:hover{
     color:#cead52;
 }
+
+/*========================== FIn Estilos Footer ================= */
+
+
+/***************************************************************************************************/
+
+/*========================== Medias queries ================= */
+
+@media screen and (max-width: 576px){
+.movies--list--section__button{
+    font-size: 16px;
+}
+.search-input-placeholder{
+    font-size: 16px;
+}
+
+table{
+    font-size: 16px;
+}
+}
+
+@media screen and (max-width: 401px){
+    .movies--list--section__button{
+        font-size: 14px;
+    }
+    .search-input-placeholder{
+        font-size: 14px;
+    }
+    
+    table{
+        font-size: 14px;
+    }
+
+    
+    }
