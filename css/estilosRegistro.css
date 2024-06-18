@@ -87,3 +87,16 @@ input[type="radio"]:checked{
 
 
 /*========================== Fin Estilos Section 1 ================= */
+
+/***************************************************************************************************/
+
+/*========================== Medias queries ================= */
+
+@media screen and (max-width: 576px){
+
+    .register--section__form{
+        border-radius: 15px;
+        padding: 25px 25px;
+    }
+
+}

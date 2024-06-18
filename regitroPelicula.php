@@ -47,7 +47,7 @@ if ($_POST) {
         <section class="register--section container-fluid">
             <h1 class="register--section__title text-center fs-3 text-uppercase pt-3">Agregue una película</h1>
             <div class="row justify-content-center register--section__container">
-                <form action="#" method="POST" class="register--section__form col-5 needs-validation" novalidate>
+                <form action="#" method="POST" class="register--section__form col-10 col-sm-8 col-lg-5 needs-validation" novalidate>
                     <div class="mb-2">
                       <label for="nombre" class="form-label text--label">Nombre</label>
                       <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -122,7 +122,7 @@ if ($_POST) {
 
                     <fieldset class="mb-2">
                         <div class="radios--section">
-                            <legend class="fs-5 fw-medium text--label mb-1">¿Te gustó?</legend>
+                            <legend class="fs-6 fs-sm-5 fw-medium text--label mb-1">¿Te gustó?</legend>
 
                             <div>
                                 <div class="form-check">
@@ -147,8 +147,8 @@ if ($_POST) {
                     </fieldset>
 
 
-                    <button type="submit" class="btn btn-primary register--btn">Registrar Película</button>
-                    <a href="./index.php" class="btn btn-danger return--btn">Volver</a>
+                    <button type="submit" class="btn btn-primary register--btn mb-2 mb-sm-0">Registrar Película</button>
+                    <a href="./index.php" class="btn btn-danger return--btn mb-2 mb-sm-0">Volver</a>
 
                   </form>
             </div>
