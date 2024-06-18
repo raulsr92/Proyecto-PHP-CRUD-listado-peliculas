@@ -102,9 +102,7 @@ main{
 /***************************************************************************************************/
 
 /*========================== Inicio Estilos Footer ================= */
-input[type="text"],input[type="number"], input[type="date"]{
-    outline: 4px solid #b225b2;
-}
+
 
 footer{
     padding: 50px 0 50px 0;

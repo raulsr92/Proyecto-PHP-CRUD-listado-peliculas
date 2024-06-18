@@ -1,7 +1,11 @@
 /*========================== Inicio Estilos Cabecera ================= */
 
 .navbar--down{
-    padding: 40px 0px;
+    padding: 20px 0px!important;
+}
+
+.logo-isil{
+    width: 50px!important;
 }
 
 
@@ -20,6 +24,11 @@ main{
     padding-bottom: 50px;
 }
 
+input[type="text"],input[type="number"], input[type="date"]{
+    outline: 1px solid #b225b2;
+    font-size: 16px;
+}
+
 .register--section__title{
     font-weight: 900;
     color: white;
@@ -36,11 +45,16 @@ input[type="radio"]:checked{
 .radios--section{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
 }
+
+.radios--section legend{
+    padding-left: 0;
+}
+
+
 .text--label{
     color: #b225b2!important;
-
+    font-size: 16px;
 }
 
 .register--section__form{
@@ -70,4 +84,7 @@ input[type="radio"]:checked{
 .return--btn:hover{
     background-color: #343C41;
 }
+
+
+
 /*========================== Fin Estilos Section 1 ================= */

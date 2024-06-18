@@ -20,13 +20,15 @@ if ($_POST) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/estilosRegistro.css">
-  </head>
+
+  
+</head>
   <body>
     <header>
         <nav class="navbar bg-body-tertiary pb-0">
             <div class="container-fluid navbar--up ">
               <a class="navbar-rand" href="#">
-                <img src="./img/logo.png" alt="Logo" width="100"  class="d-inline-block align-text-top">
+                <img src="./img/logo.png" alt="Logo" width="100"  class="d-inline-block align-text-top logo-isil">
               </a>
               <p>Crud de Películas</p>
             </div>
@@ -45,47 +47,102 @@ if ($_POST) {
         <section class="register--section container-fluid">
             <h1 class="register--section__title text-center fs-3 text-uppercase pt-3">Agregue una película</h1>
             <div class="row justify-content-center register--section__container">
-                <form action="#" method="POST" class="register--section__form col-5" >
-                    <div class="mb-3">
+                <form action="#" method="POST" class="register--section__form col-5 needs-validation" novalidate>
+                    <div class="mb-2">
                       <label for="nombre" class="form-label text--label">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" name="nombre">
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
+                      <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            !El campo de nombre está vacío!
+                        </div>
                     </div>
-                    <div class="mb-3">
+                   
+                    <div class="mb-2">
                         <label for="director" class="form-label text--label">Director</label>
-                        <input type="text" class="form-control" id="director" name="director">
+                        <input type="text" class="form-control" id="director" name="director" required>
+                        <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            !El campo del Director está vacío!
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="calificacion" class="form-label text--label">Calificación</label>
-                        <input type="number" class="form-control" id="calificacion" name="calificacion">
+                        <input type="number" class="form-control" id="calificacion" name="calificacion" required>
+                        <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingrese una califiación.
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="premios" class="form-label text--label">Cantidad de Premios</label>
-                        <input type="number" class="form-control" id="premios" name="premios">
+                        <input type="number" class="form-control" id="premios" name="premios" required>
+                        <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingrese la cantidad de premios.
+                        </div>
                     </div>  
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="fe-creacion" class="form-label text--label">Fecha de creación</label>
-                        <input type="date" class="form-control" id="fe-creacion" name="fe-creacion">
+                        <input type="date" class="form-control" id="fe-creacion" name="fe-creacion" required>
+                        <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            Ingrese la fecha de creación del registro.
+                        </div>
                     </div>          
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="duracion" class="form-label text--label">Duración</label>
-                        <input type="number" class="form-control" id="duracion" name="duracion">
+                        <input type="number" class="form-control" id="duracion" name="duracion" required>
+                        <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            !El campo de duración de la película está vacío!
+                        </div>
                     </div>   
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="director" class="form-label text--label">Género</label>
-                        <input type="text" class="form-control" id="director" name="genero">
+                        <input type="text" class="form-control" id="director" name="genero" required>
+                        <div class="valid-feedback">
+                            !Validación exitosa!.
+                        </div>
+                        <div class="invalid-feedback">
+                            !El campo del género de la película está vacío!
+                        </div>
                     </div>  
 
-                    <fieldset class="mb-3">
-                        <legend class="fs-4 fw-medium text--label">¿Te gustó?</legend>
+                    <fieldset class="mb-2">
                         <div class="radios--section">
+                            <legend class="fs-5 fw-medium text--label mb-1">¿Te gustó?</legend>
+
                             <div>
-                                <input type="radio" class="form-check-input" id="preferencia-si" name="preferencia" value="1">
-                                <label for="preferencia-si">SI</label>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="preferencia-si" name="preferencia" value="1" required>
+                                    <label class="form-check-label text--label" for="preferencia-si">SI</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="preferencia-no" name="preferencia" value="0" required>
+                                    <label class="form-check-label text--label" for="preferencia-no">NO</label>
+                                    <div class="valid-feedback"> <!--Para poner la validación en una opcion de radio buttons, el contenedor de cada uno dedebe tener clase "form-check" y dentro cada input y label deben tener las clases "form-check-input" y "form-check-label" respectivamente. Finalmente las opciones de valid e invalid feedback van en la última opción-->
+                                        !Validación exitosa!.
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        !Debes indicar si te gustó o no la película!
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <input type="radio" class="form-check-input" id="preferencia-no" name="preferencia" value="0">
-                                <label for="preferencia-no">NO</label>
-                            </div>
+
+
+
                         </div>
                     </fieldset>
 
@@ -124,7 +181,7 @@ if ($_POST) {
             </div>
         </section>
     </footer>
-    
+    <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
