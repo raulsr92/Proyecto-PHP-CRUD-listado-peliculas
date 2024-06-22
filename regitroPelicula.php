@@ -5,7 +5,7 @@ include_once './controladores/funciones.php';
 $bd = conexion('localhost','cine_isil','root','');
 
 if ($_POST) {
-  guardarUsuario($bd,'movies',$_POST);
+  guardarPelicula($bd,'movies',$_POST);
 }
 
 ?>

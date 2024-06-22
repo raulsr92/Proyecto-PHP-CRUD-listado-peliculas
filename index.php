@@ -4,7 +4,7 @@ include_once './controladores/funciones.php';
 
 $bd = conexion('localhost','cine_isil','root','');
 
-$arrayDePeliculas = buscarUsuario($bd,'movies');
+$arrayDePeliculas = buscarPelicula($bd,'movies');
 
 
 ?>

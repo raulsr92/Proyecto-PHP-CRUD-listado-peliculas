@@ -12,7 +12,7 @@ function conexion($host, $bd, $usuario, $clave){
       }
 }
 
-function guardarUsuario($bd, $tabla, $datos){
+function guardarPelicula($bd, $tabla, $datos){
 
     // Almacenar los datos recibidos del formulario
     $nombre = $datos['nombre'];
@@ -49,7 +49,7 @@ function guardarUsuario($bd, $tabla, $datos){
 
 }
 
-function buscarUsuario($bd, $tabla){
+function buscarPelicula($bd, $tabla){
 
     // Armar la consulta 
     $sql = "Select * from $tabla";
